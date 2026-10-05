@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#1677ff">
+  <title>vpluspart | فروش قطعات خودرو</title>
+  <link rel="icon" href="images/logo.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#products"><img src="images/logo.svg" alt="vpluspart"><span>vpluspart</span></a>
+    <nav class="main-nav" aria-label="منوی اصلی">
+      <a href="#products">محصولات</a>
+      <a href="#cart">سبد خرید <b id="cartCount" class="badge">0</b></a>
+      <a href="#account">حساب کاربری</a>
+      <a href="#support">پشتیبانی</a>
+      <button id="logoutBtn" class="nav-btn" type="button">خروج</button>
+    </nav>
+    <button id="menuBtn" class="menu-btn" type="button" aria-label="باز کردن منو">☰</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="eyebrow">فروش آنلاین لوازم یدکی خودرو</span>
+        <h1>قطعه مناسب خودرو،<br><strong>سریع و مطمئن</strong></h1>
+        <p>جستجو، مشاهده قیمت و ثبت سفارش قطعات خودرو در vpluspart.</p>
+        <a class="primary-btn" href="#products">مشاهده محصولات</a>
+      </div>
+      <div class="hero-card">
+        <span>V+</span>
+        <strong>VPLUS PART</strong>
+        <small>قطعات خودرو</small>
+      </div>
+    </section>
+
+    <section id="products" class="section app-page">
+      <div class="section-head">
+        <div><span class="eyebrow">فروشگاه</span><h2>محصولات</h2></div>
+        <span id="productStatus" class="muted">در حال دریافت محصولات...</span>
+      </div>
+      <div class="tools">
+        <input id="searchInput" type="search" placeholder="جستجوی نام یا کد کالا..." autocomplete="off">
+        <select id="categoryFilter"><option value="">همه دسته‌ها</option></select>
+        <select id="brandFilter"><option value="">همه برندها</option></select>
+      </div>
+      <div id="productGrid" class="product-grid"></div>
+      <div id="emptyProducts" class="empty hidden">محصولی مطابق جستجوی شما پیدا نشد.</div>
+    </section>
+
+    <section id="cart" class="section alt app-page hidden">
+      <div class="section-head"><div><span class="eyebrow">خرید</span><h2>سبد خرید</h2></div></div>
+      <div id="cartBox"></div>
+    </section>
+
+    <section id="account" class="section app-page hidden">
+      <div class="section-head"><div><span class="eyebrow">کاربر</span><h2>حساب کاربری</h2></div></div>
+      <div id="accountBox"></div>
+    </section>
+
+    <section id="support" class="section alt app-page hidden">
+      <div class="section-head"><div><span class="eyebrow">ارتباط</span><h2>پشتیبانی</h2></div></div>
+      <div class="support-grid">
+        <div class="support-card"><span class="support-icon">☎</span><h3>پشتیبانی فروش</h3><p>برای پیگیری سفارش و سوالات خرید با ما در تماس باشید.</p><a id="phoneLink" href="#">تماس تلفنی</a></div>
+        <div class="support-card"><span class="support-icon">◉</span><h3>واتساپ</h3><p>ارسال سریع مشخصات قطعه و دریافت راهنمایی.</p><a id="whatsappLink" href="#" target="_blank" rel="noopener">گفتگو در واتساپ</a></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status"></div>
+  <div id="modal" class="modal hidden"><div class="modal-card"><button id="modalClose" class="modal-close">×</button><div id="modalContent"></div></div></div>
+  <footer>© <span id="year"></span> vpluspart — فروش لوازم یدکی خودرو</footer>
+  <script src="config/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
